@@ -1,3 +1,9 @@
+This is a *minimally modified* branch of Akkoma-FE intended to fix a handful of small issues that cannot be fixed in the backend alone.
+
+Before attempting to fix something in here, please check if it's possible to cleanly fix it just in the backend alone.
+
+---
+
 # Akkoma-FE
 
 ![English OK](https://img.shields.io/badge/English-OK-blueviolet) ![日本語OK](https://img.shields.io/badge/%E6%97%A5%E6%9C%AC%E8%AA%9E-OK-blueviolet)
