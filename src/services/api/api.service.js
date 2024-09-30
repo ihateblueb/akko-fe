@@ -901,7 +901,7 @@ const postStatus = ({
       form.append('poll[options][]', option)
     })
   }
-  if (inReplyToStatusId) {
+  if (inReplyToStatusId && typeof inReplyToStatusId === 'string') {
     form.append('in_reply_to_id', inReplyToStatusId)
   }
   if (quoteId) {
