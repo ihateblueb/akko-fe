@@ -345,7 +345,7 @@ const setConfig = async ({ store }) => {
   const apiConfig = configInfos[0]
   const staticConfig = configInfos[1]
 
-  await setSettings({ store, apiConfig, staticConfig }).then(getAppSecret({ store }))
+  await setSettings({ store, apiConfig, staticConfig })
 }
 
 const checkOAuthToken = async ({ store }) => {
