@@ -338,7 +338,7 @@
         "poll_ended": "poll has ended",
         "reacted_with": "reacted with {0}",
         "read": "Read!",
-        "repeated_you": "repeated your post"
+        "repeated_you": "boosted your post"
     },
     "password_reset": {
         "check_email": "Check your email for a link to reset your password.",
@@ -1059,10 +1059,10 @@
         "follow_tag": "Follow hashtag",
         "load_older": "Load older posts",
         "no_more_statuses": "No more posts",
-        "no_retweet_hint": "Post is marked as followers-only or direct and cannot be repeated or quoted",
+        "no_retweet_hint": "Post is marked as followers-only or direct and cannot be boosted or quoted",
         "no_statuses": "No posts",
         "reload": "Reload",
-        "repeated": "repeated",
+        "repeated": "boosted",
         "show_new": "Show new",
         "socket_broke": "Realtime connection lost: CloseEvent code {0}",
         "socket_reconnected": "Realtime connection established",
