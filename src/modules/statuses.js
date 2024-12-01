@@ -776,6 +776,9 @@ const statuses = {
     },
     setVirtualHeight ({ commit }, { statusId, height }) {
       commit('setVirtualHeight', { statusId, height })
+    },
+    biteNote (store, id) {
+      return store.rootState.api.backendInteractor.biteNote({ id })
     }
   },
   mutations
