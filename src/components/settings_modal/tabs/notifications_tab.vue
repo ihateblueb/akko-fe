@@ -46,6 +46,11 @@
                 {{ $t('settings.notification_visibility_polls') }}
               </BooleanSetting>
             </li>
+            <li>
+              <BooleanSetting path="notificationVisibility.bites">
+                {{ $t('settings.notification_visibility_bites') }}
+              </BooleanSetting>
+            </li>
           </ul>
         </li>
       </ul>

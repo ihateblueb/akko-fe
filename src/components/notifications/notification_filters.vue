@@ -70,6 +70,15 @@
             :class="{ 'menu-checkbox-checked': filters.polls }"
           />{{ $t('settings.notification_visibility_polls') }}
         </button>
+        <button
+          class="button-default dropdown-item"
+          @click="toggleNotificationFilter('bites')"
+        >
+          <span
+            class="menu-checkbox"
+            :class="{ 'menu-checkbox-checked': filters.bites }"
+          />{{ $t('settings.notification_visibility_bites') }}
+        </button>
       </div>
     </template>
     <template #trigger>

@@ -326,6 +326,8 @@
         "who_to_follow": "Who to follow"
     },
     "notifications": {
+        "bit": "bit you!",
+        "bit_note": "bit your note!",
         "broken_favorite": "Unknown post, searching for it…",
         "error": "Error fetching notifications: {0}",
         "favorited_you": "favorited your post",
@@ -668,6 +670,7 @@
         "notification_setting_hide_notification_contents": "Hide the sender and contents of push notifications",
         "notification_setting_privacy": "Privacy",
         "notification_visibility": "Types of notifications to show",
+        "notification_visibility_bites": "Bites",
         "notification_visibility_emoji_reactions": "Reactions",
         "notification_visibility_follows": "Follows",
         "notification_visibility_likes": "Favorites",
