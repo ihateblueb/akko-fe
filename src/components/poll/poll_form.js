@@ -35,7 +35,7 @@ export default {
       return this.pollLimits.max_option_chars
     },
     expiryUnits () {
-      const allUnits = ['minutes', 'hours', 'days']
+      const allUnits = ['seconds', 'minutes', 'hours', 'days', 'years']
       const expiry = this.convertExpiryFromUnit
       return allUnits.filter(
         unit => this.pollLimits.max_expiration >= expiry(unit, 1)
@@ -95,17 +95,21 @@ export default {
     convertExpiryToUnit (unit, amount) {
       // Note: we want seconds and not milliseconds
       switch (unit) {
+        case 'seconds': return (1000 * amount) / DateUtils.SECOND
         case 'minutes': return (1000 * amount) / DateUtils.MINUTE
         case 'hours': return (1000 * amount) / DateUtils.HOUR
         case 'days': return (1000 * amount) / DateUtils.DAY
+        case 'years': return (1000 * amount) / DateUtils.YEAR
       }
     },
     convertExpiryFromUnit (unit, amount) {
       // Note: we want seconds and not milliseconds
       switch (unit) {
+        case 'seconds': return amount * DateUtils.SECOND / 1000
         case 'minutes': return amount * DateUtils.MINUTE / 1000
         case 'hours': return amount * DateUtils.HOUR / 1000
         case 'days': return amount * DateUtils.DAY / 1000
+        case 'years': return amount * DateUtils.YEAR / 1000
       }
     },
     expiryAmountChange () {

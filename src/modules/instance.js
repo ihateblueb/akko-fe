@@ -100,10 +100,10 @@ const defaultState = {
 
   pollsAvailable: false,
   pollLimits: {
-    max_options: 4,
+    max_options: 20,
     max_option_chars: 255,
-    min_expiration: 60,
-    max_expiration: 60 * 60 * 24
+    min_expiration: 1,
+    max_expiration: 60 * 60 * 24 * 365 * 1000
   }
 }
 
