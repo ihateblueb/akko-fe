@@ -60,7 +60,6 @@
   padding: 0.6em;
   height: var(--__panel-heading-height);
   line-height: var(--__panel-heading-height-inner);
-  z-index: 0;
 
   &.-flexible-height {
     --__panel-heading-height: auto;
@@ -131,6 +130,7 @@
   color: var(--panelText);
   background-color: $fallback--bg;
   background-color: var(--bg, $fallback--bg);
+  z-index: 1;
 
   &::after {
     background-color: $fallback--fg;
@@ -195,4 +195,5 @@
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: var(--border, $fallback--border);
+  z-index: 0;
 }
