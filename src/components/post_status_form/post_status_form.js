@@ -14,6 +14,7 @@ import suggestor from '../emoji_input/suggestor.js'
 import { mapGetters, mapState } from 'vuex'
 import Checkbox from '../checkbox/checkbox.vue'
 import Select from '../select/select.vue'
+import ConfirmModal from '../confirm_modal/confirm_modal.vue'
 
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -34,6 +35,10 @@ library.add(
   faTimes,
   faCircleNotch
 )
+
+var finEvent
+var finNewStatus
+var finOpts
 
 const buildMentionsString = ({ user, attentions = [] }, currentUser) => {
   let allAttentions = [...attentions]
@@ -122,7 +127,8 @@ const PostStatusForm = {
     Select,
     Attachment,
     StatusContent,
-    Gallery
+    Gallery,
+    ConfirmModal
   },
   mounted () {
     this.updateIdempotencyKey()
@@ -236,7 +242,8 @@ const PostStatusForm = {
       idempotencyKey: '',
       activeEmojiInput: undefined,
       activeTextInput: undefined,
-      subjectVisible: showSubject
+      subjectVisible: showSubject,
+      showingPostConfirmDialog: false
     }
   },
   computed: {
@@ -770,6 +777,32 @@ const PostStatusForm = {
         }
       }
       return this.$store.state.users.currentUser.default_scope
+    },
+    hideDenyConfirmDialog () {
+      this.showingPostConfirmDialog = false
+
+      finEvent = null
+      finNewStatus = null
+      finOpts = null
+    },
+    doPostYes () {
+      this.showingPostConfirmDialog = false
+      this.postStatus(finEvent, finNewStatus, finOpts)
+    },
+    handlePost (event, newStatus, opts = {}) {
+      if (this.mergedConfig.modalOnPubPost) {
+        if (newStatus.visibility === "public" || newStatus.visibility === "unlisted" || newStatus.visibility === "local") {
+          finEvent = event
+          finNewStatus = newStatus
+          finOpts = opts
+
+          this.showingPostConfirmDialog = true
+        } else {
+          this.postStatus(event, newStatus, opts = {})
+        }
+      } else {
+        this.postStatus(event, newStatus, opts = {})
+      }
     }
   }
 }

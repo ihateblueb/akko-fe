@@ -171,9 +171,9 @@
             :disabled="posting && !optimisticPosting"
             class="form-post-body"
             :class="{ 'scrollable-form': !!maxHeight, '-has-subject': subjectVisible }"
-            @keydown.exact.enter="submitOnEnter && postStatus($event, newStatus)"
-            @keydown.meta.enter="postStatus($event, newStatus)"
-            @keydown.ctrl.enter="!submitOnEnter && postStatus($event, newStatus)"
+            @keydown.exact.enter="submitOnEnter && handlePost($event, newStatus)"
+            @keydown.meta.enter="handlePost($event, newStatus)"
+            @keydown.ctrl.enter="!submitOnEnter && handlePost($event, newStatus)"
             @input="resize"
             @compositionupdate="resize"
             @paste="paste"
@@ -317,7 +317,7 @@
           v-else
           :disabled="uploadingFiles || disableSubmit"
           class="btn button-default"
-          @click.stop.prevent="postStatus($event, newStatus)"
+          @click.stop.prevent="handlePost($event, newStatus)"
         >
           {{ $t('post_status.post') }}
         </button>
@@ -371,6 +371,18 @@
         </Checkbox>
       </div>
     </form>
+    <teleport to="#modal">
+      <confirm-modal
+        v-if="showingPostConfirmDialog"
+        :title="$t('post_status.post_confirm_title')"
+        :confirm-text="$t('post_status.post_confirm_accept_button')"
+        :cancel-text="$t('post_status.post_confirm_cancel_button')"
+        @accepted="doPostYes"
+        @cancelled="hideDenyConfirmDialog"
+      >
+        {{ $t('post_status.post_confirm') }}
+      </confirm-modal>
+    </teleport>
   </div>
 </template>
 

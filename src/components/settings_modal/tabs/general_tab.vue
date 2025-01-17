@@ -320,6 +320,11 @@
                 {{ $t('settings.confirm_dialogs_deny_follow') }}
               </BooleanSetting>
             </li>
+            <li>
+              <BooleanSetting path="modalOnPubPost">
+                {{ $t('settings.confirm_dialogs_public_post') }}
+              </BooleanSetting>
+            </li>
           </ul>
         </li>
       </ul>

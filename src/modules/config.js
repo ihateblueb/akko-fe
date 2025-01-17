@@ -90,6 +90,7 @@ export const defaultState = {
   modalOnLogout: undefined, // instance default
   modalOnApproveFollow: undefined, // instance default
   modalOnDenyFollow: undefined, // instance default
+  modalOnPubPost: undefined, // instance default
   playVideosInModal: false,
   useOneClickNsfw: false,
   useContainFit: true,
