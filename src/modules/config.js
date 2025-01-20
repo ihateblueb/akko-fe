@@ -109,6 +109,9 @@ export const defaultState = {
   virtualScrolling: undefined, // instance default
   sensitiveByDefault: undefined, // instance default
   sensitiveIfSubject: undefined,
+  soundOnNotif: false,
+  soundOnNotifVolume: 0.2,
+  soundOnNotifCustom: '',
   renderMisskeyMarkdown: undefined,
   renderMfmOnHover: undefined, // instance default
   conversationDisplay: undefined, // instance default

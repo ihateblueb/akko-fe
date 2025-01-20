@@ -674,6 +674,7 @@
         "notification_setting_hide_if_cw": "Hide the contents of push notifications if under a Content Warning",
         "notification_setting_hide_notification_contents": "Hide the sender and contents of push notifications",
         "notification_setting_privacy": "Privacy",
+        "notification_setting_sounds": "Sounds",
         "notification_visibility": "Types of notifications to show",
         "notification_visibility_bites": "Bites",
         "notification_visibility_emoji_reactions": "Reactions",
@@ -763,6 +764,10 @@
         "show_page_backgrounds": "Show page-specific backgrounds, e.g. for user profiles",
         "show_wider_shortcuts": "Show wider gap between top panel shortcuts",
         "show_yous": "Show (You)s",
+        "sound_on_notification": "Play a sound when you get a notification",
+        "sound_on_notification_custom": "Custom sounds",
+        "sound_on_notification_custom_exp": "Put URLs to custom sounds in this box, one line for each. If you want one sound to have a different volume, put a semicolon after the link and the volume as a number between 0 and 1.",
+        "sound_on_notification_volume": "Volume of the default notification sound",
         "stop_gifs": "Pause animated images until you hover on them",
         "streaming": "Automatically show new posts when scrolled to the top",
         "style": {

@@ -1,4 +1,6 @@
 import BooleanSetting from '../helpers/boolean_setting.vue'
+import FloatSetting from '../helpers/float_setting.vue'
+import TextSetting from '../helpers/text_setting.vue'
 import SharedComputedObject from '../helpers/shared_computed_object.js'
 
 const NotificationsTab = {
@@ -10,7 +12,9 @@ const NotificationsTab = {
     }
   },
   components: {
-    BooleanSetting
+    BooleanSetting,
+    FloatSetting,
+    TextSetting
   },
   computed: {
     user () {

@@ -134,5 +134,24 @@ export const prepareNotificationObject = (notification, i18n, store) => {
     notifObj.image = status.attachments[0].url
   }
 
+  if (store.getters.mergedConfig.soundOnNotif) {
+    if (store.getters.mergedConfig.soundOnNotifCustom !== '') {
+      var soundList = store.getters.mergedConfig.soundOnNotifCustom.split("\n")
+      var randomSound = soundList[Math.floor(Math.random() * soundList.length)]
+      var soundVol = (randomSound.split(";").length > 1 ? randomSound.split(";")[1] : store.getters.mergedConfig.soundOnNotifVolume)
+
+      var sound = new Audio(randomSound.split(";")[0])
+      sound.volume = soundVol
+      sound.play()
+    } else {
+      var soundList = ['/static/misskey-notif.mp3']
+      randomSound = soundList[Math.floor(Math.random() * soundList.length)]
+
+      var sound = new Audio(randomSound)
+      sound.volume = store.getters.mergedConfig.soundOnNotifVolume
+      sound.play()
+    }
+  }
+
   return notifObj
 }

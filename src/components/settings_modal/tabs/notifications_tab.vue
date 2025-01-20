@@ -88,6 +88,37 @@
         </li>
       </ul>
     </div>
+
+    <div
+      class="setting-item"
+    >
+      <h2>{{ $t('settings.notification_setting_sounds') }}</h2>
+      <ul class="setting-list">
+        <li>
+          <BooleanSetting path="soundOnNotif">
+            {{ $t('settings.sound_on_notification') }}
+          </BooleanSetting>
+        </li>
+        <li>
+          <FloatSetting
+            id="soundOnNotifVolume"
+            path="soundOnNotifVolume"
+          >
+            {{ $t('settings.sound_on_notification_volume') }}
+          </FloatSetting>
+        </li>
+        <li>
+          <h3>{{ $t('settings.sound_on_notification_custom') }}</h3>
+          <TextSetting
+            id="soundOnNotifCustom"
+            path="soundOnNotifCustom"
+          >
+            {{ $t('settings.sound_on_notification_custom') }}
+          </TextSetting>
+          <div>{{ $t('settings.sound_on_notification_custom_exp') }}</div>
+        </li>
+      </ul>
+    </div>
     <div class="setting-item">
       <p>{{ $t('settings.notification_mutes') }}</p>
       <p>{{ $t('settings.notification_blocks') }}</p>
