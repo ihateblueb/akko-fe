@@ -115,8 +115,6 @@ const api = {
             ({ detail: message }) => {
               const replyVisibility = rootState.config.replyVisibility;
               if (!message) return; // pings
-              // check deletes to avoid an error in console
-              if ((message.event !== "delete") && (message.status.user.id === store.rootState.users.currentUser.id)) return; 
               if (message.event === "notification") {
                 dispatch("addNewNotifications", {
                   notifications: [message.notification],
