@@ -136,9 +136,25 @@ export const prepareNotificationObject = (notification, i18n, store) => {
 
   if (store.getters.mergedConfig.soundOnNotif) {
     if (store.getters.mergedConfig.soundOnNotifCustom !== '') {
+      var fallback = true
+      var soundVol
       var soundList = store.getters.mergedConfig.soundOnNotifCustom.split("\n")
-      var randomSound = soundList[Math.floor(Math.random() * soundList.length)]
-      var soundVol = (randomSound.split(";").length > 1 ? randomSound.split(";")[1] : store.getters.mergedConfig.soundOnNotifVolume)
+      var randomSound
+      soundList.forEach(sound => {
+        // if there's more args, assume specific user tied to sound
+        if (sound.split(";").length > 2) {
+          var user = [sound.split(";")[2]]
+          if (user == notification.from_profile.id) {
+            randomSound = sound.split(";")[0]
+            soundVol = (sound.split(";")[1].length > 0 ? sound.split(";")[1] : store.getters.mergedConfig.soundOnNotifVolume)
+            fallback = false
+          }
+        }
+      });
+      if (fallback) {
+        randomSound = soundList[Math.floor(Math.random() * soundList.length)]
+        soundVol = (randomSound.split(";").length > 1 ? randomSound.split(";")[1] : store.getters.mergedConfig.soundOnNotifVolume)
+      }
 
       var sound = new Audio(randomSound.split(";")[0])
       sound.volume = soundVol

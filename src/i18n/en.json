@@ -767,7 +767,7 @@
         "show_yous": "Show (You)s",
         "sound_on_notification": "Play a sound when you get a notification",
         "sound_on_notification_custom": "Custom sounds",
-        "sound_on_notification_custom_exp": "Put URLs to custom sounds in this box, one line for each. If you want one sound to have a different volume, put a semicolon after the link and the volume as a number between 0 and 1.",
+        "sound_on_notification_custom_exp": "Put URLs to custom sounds in this box, one line for each. If you want one sound to have a different volume, put a semicolon after the link and the volume as a number between 0 and 1. If you want a sound to affect a certain user, use a second semicolon and then their ID.",
         "sound_on_notification_volume": "Volume of the default notification sound",
         "stop_gifs": "Pause animated images until you hover on them",
         "streaming": "Automatically show new posts when scrolled to the top",
