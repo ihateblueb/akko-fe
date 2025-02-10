@@ -492,6 +492,7 @@
         "block_import_error": "Error importing blocks",
         "blocks_imported": "Blocks imported! Processing them will take a while.",
         "blocks_tab": "Blocks",
+        "boosts_follow_def_vis": "Make boosts follow default visibility",
         "bot": "This is a bot account",
         "btnRadius": "Buttons",
         "cBlue": "Blue (Reply, follow)",

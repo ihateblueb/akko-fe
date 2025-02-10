@@ -844,6 +844,11 @@ const retweet = ({ id, credentials }) => {
     .then((data) => parseStatus(data))
 }
 
+const retweet_dv = ({ id, credentials, visibility }) => {
+  return promisedRequest({ url: MASTODON_RETWEET_URL(id), method: 'POST', credentials, payload: {"visibility": visibility} })
+      .then((data) => parseStatus(data))
+}
+
 const unretweet = ({ id, credentials }) => {
   return promisedRequest({ url: MASTODON_UNRETWEET_URL(id), method: 'POST', credentials })
     .then((data) => parseStatus(data))
@@ -1785,6 +1790,7 @@ const apiService = {
   favorite,
   unfavorite,
   retweet,
+  retweet_dv,
   unretweet,
   bookmarkStatus,
   unbookmarkStatus,

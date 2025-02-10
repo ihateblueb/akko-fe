@@ -70,6 +70,7 @@ const defaultState = {
   soundOnNotif: false,
   soundOnNotifVolume: 0.2,
   soundOnNotifCustom: '',
+  boostsFollowDefVis: false,
   renderMisskeyMarkdown: true,
   renderMfmOnHover: false,
   conversationDisplay: 'linear',

@@ -669,6 +669,12 @@ const statuses = {
       rootState.api.backendInteractor.retweet({ id: status.id })
         .then(status => commit('setRetweetedConfirm', { status: status.retweeted_status, user: rootState.users.currentUser }))
     },
+    retweet_dv ({ rootState, commit }, status) {
+      // Optimistic retweeting... ????????
+      commit('setRetweeted', { status, value: true })
+      rootState.api.backendInteractor.retweet_dv({ id: status.id, visibility: rootState.users.currentUser.default_scope })
+        .then(status => commit('setRetweetedConfirm', { status: status.retweeted_status, user: rootState.users.currentUser }))
+    },
     unretweet ({ rootState, commit }, status) {
       // Optimistic unretweeting...
       commit('setRetweeted', { status, value: false })

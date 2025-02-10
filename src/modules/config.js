@@ -112,6 +112,7 @@ export const defaultState = {
   soundOnNotif: false,
   soundOnNotifVolume: 0.2,
   soundOnNotifCustom: '',
+  boostsFollowDefVis: false,
   renderMisskeyMarkdown: undefined,
   renderMfmOnHover: undefined, // instance default
   conversationDisplay: undefined, // instance default

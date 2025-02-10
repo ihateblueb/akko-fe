@@ -562,6 +562,11 @@
           </label>
         </li>
         <li>
+          <BooleanSetting path="boostsFollowDefVis">
+            {{ $t('settings.boosts_follow_def_vis') }}
+          </BooleanSetting>
+        </li>
+        <li>
           <BooleanSetting path="sensitiveByDefault">
             {{ $t('settings.sensitive_by_default') }}
           </BooleanSetting>
