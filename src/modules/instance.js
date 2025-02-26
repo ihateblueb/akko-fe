@@ -47,6 +47,7 @@ const defaultState = {
   modalOnLogout: true,
   modalOnApproveFollow: false,
   modalOnDenyFollow: false,
+  modalOnSensitiveAttachmentWithoutCW: false,
   modalOnDirectPost: false,
   modalOnPrivatePost: false,
   modalOnUnlistedPost: false,

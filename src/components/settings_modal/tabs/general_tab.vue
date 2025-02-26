@@ -320,6 +320,11 @@
                 {{ $t('settings.confirm_dialogs_deny_follow') }}
               </BooleanSetting>
             </li>
+            <li>
+              <BooleanSetting path="modalOnSensitiveAttachmentWithoutCW">
+                {{ $t('settings.confirm_dialogs_sensitive_attachment_without_cw') }}
+              </BooleanSetting>
+            </li>
           </ul>
         </li>
         <li class="select-multiple">

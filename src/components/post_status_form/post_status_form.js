@@ -790,11 +790,14 @@ const PostStatusForm = {
       this.postStatus(finEvent, finNewStatus, finOpts)
     },
     handlePost (event, newStatus, opts = {}) {
-      if ((newStatus.visibility === "direct"   && this.mergedConfig.modalOnDirectPost)
-       || (newStatus.visibility === "private"  && this.mergedConfig.modalOnPrivatePost)
-       || (newStatus.visibility === "unlisted" && this.mergedConfig.modalOnUnlistedPost)
-       || (newStatus.visibility === "public"   && this.mergedConfig.modalOnPublicPost)
-       || (newStatus.visibility === "local"    && this.mergedConfig.modalOnLocalPost)) {
+      if (
+        (newStatus.visibility === "direct"   && this.mergedConfig.modalOnDirectPost)   ||
+        (newStatus.visibility === "private"  && this.mergedConfig.modalOnPrivatePost)  ||
+        (newStatus.visibility === "unlisted" && this.mergedConfig.modalOnUnlistedPost) ||
+        (newStatus.visibility === "public"   && this.mergedConfig.modalOnPublicPost)   ||
+        (newStatus.visibility === "local"    && this.mergedConfig.modalOnLocalPost)    ||
+        (newStatus.nsfw && newStatus.spoilerText === "" && this.mergedConfig.modalOnSensitiveAttachmentWithoutCW)
+      ) {
         finEvent = event
         finNewStatus = newStatus
         finOpts = opts

@@ -90,6 +90,7 @@ export const defaultState = {
   modalOnLogout: undefined, // instance default
   modalOnApproveFollow: undefined, // instance default
   modalOnDenyFollow: undefined, // instance default
+  modalOnSensitiveAttachmentWithoutCW: undefined, // instance default
   modalOnDirectPost: undefined, // instance default
   modalOnPrivatePost: undefined, // instance default
   modalOnUnlistedPost: undefined, // instance default
