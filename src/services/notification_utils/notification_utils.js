@@ -140,23 +140,24 @@ export const prepareNotificationObject = (notification, i18n, store) => {
       var soundVol
       var soundList = store.getters.mergedConfig.soundOnNotifCustom.split("\n")
       var randomSound
-      var indexesToRemove = []
+      var tempList = []
       soundList.forEach(sound => {
         // if there's more args, assume specific user tied to sound
         if (sound.split(";").length > 2) {
-          indexesToRemove.push(soundList.indexOf(sound))
           var user = [sound.split(";")[2]]
           if (user == notification.from_profile.id) {
             randomSound = sound.split(";")[0]
             soundVol = (sound.split(";")[1].length > 0 ? sound.split(";")[1] : store.getters.mergedConfig.soundOnNotifVolume)
             fallback = false
           }
+        } else {
+          tempList.push(sound)
         }
       });
-      // ensure we remove the sounds with > 2 args
-      indexesToRemove.forEach(index => {
-        soundList.splice(index, 1)
-      })
+      // ensure we only have the sounds with <= 2 args
+      if (tempList.length > 0) {
+        soundList = tempList
+      }
       if (fallback) {
         randomSound = soundList[Math.floor(Math.random() * soundList.length)]
         soundVol = (randomSound.split(";").length > 1 ? randomSound.split(";")[1] : store.getters.mergedConfig.soundOnNotifVolume)
