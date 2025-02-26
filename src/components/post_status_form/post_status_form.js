@@ -790,16 +790,16 @@ const PostStatusForm = {
       this.postStatus(finEvent, finNewStatus, finOpts)
     },
     handlePost (event, newStatus, opts = {}) {
-      if (this.mergedConfig.modalOnPubPost) {
-        if (newStatus.visibility === "public" || newStatus.visibility === "unlisted" || newStatus.visibility === "local") {
-          finEvent = event
-          finNewStatus = newStatus
-          finOpts = opts
+      if ((newStatus.visibility === "direct"   && this.mergedConfig.modalOnDirectPost)
+       || (newStatus.visibility === "private"  && this.mergedConfig.modalOnPrivatePost)
+       || (newStatus.visibility === "unlisted" && this.mergedConfig.modalOnUnlistedPost)
+       || (newStatus.visibility === "public"   && this.mergedConfig.modalOnPublicPost)
+       || (newStatus.visibility === "local"    && this.mergedConfig.modalOnLocalPost)) {
+        finEvent = event
+        finNewStatus = newStatus
+        finOpts = opts
 
-          this.showingPostConfirmDialog = true
-        } else {
-          this.postStatus(event, newStatus, opts = {})
-        }
+        this.showingPostConfirmDialog = true
       } else {
         this.postStatus(event, newStatus, opts = {})
       }

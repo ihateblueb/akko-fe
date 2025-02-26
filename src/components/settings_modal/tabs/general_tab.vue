@@ -320,9 +320,34 @@
                 {{ $t('settings.confirm_dialogs_deny_follow') }}
               </BooleanSetting>
             </li>
+          </ul>
+        </li>
+        <li class="select-multiple">
+          <span class="label">{{ $t('settings.confirm_visibility_dialogs') }}</span>
+          <ul class="option-list">
             <li>
-              <BooleanSetting path="modalOnPubPost">
-                {{ $t('settings.confirm_dialogs_public_post') }}
+              <BooleanSetting path="modalOnDirectPost">
+                {{ $t('settings.confirm_visibility_dialogs_direct_post') }}
+              </BooleanSetting>
+            </li>
+            <li>
+              <BooleanSetting path="modalOnPrivatePost">
+                {{ $t('settings.confirm_visibility_dialogs_private_post') }}
+              </BooleanSetting>
+            </li>
+            <li>
+              <BooleanSetting path="modalOnUnlistedPost">
+                {{ $t('settings.confirm_visibility_dialogs_unlisted_post') }}
+              </BooleanSetting>
+            </li>
+            <li>
+              <BooleanSetting path="modalOnPublicPost">
+                {{ $t('settings.confirm_visibility_dialogs_public_post') }}
+              </BooleanSetting>
+            </li>
+            <li>
+              <BooleanSetting path="modalOnLocalPost">
+                {{ $t('settings.confirm_visibility_dialogs_local_post') }}
               </BooleanSetting>
             </li>
           </ul>
