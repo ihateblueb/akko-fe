@@ -1,6 +1,23 @@
-This is a *minimally modified* branch of Akkoma-FE intended to fix a handful of small issues that cannot be fixed in the backend alone.
+## notfire's modified version of [akkoma-fe for iceshrimp.net](https://iceshrimp.dev/iceshrimp/akkoma-fe) with some personal qol stuff
 
-Before attempting to fix something in here, please check if it's possible to cleanly fix it just in the backend alone.
+## list of changes in this fork:
+- additional confirmations for:
+    - post visibility (choose direct, private, unlisted, public, local)
+    - posting with an attachment marked sensitive but no cw
+- biting:
+    - users
+    - notes
+    - notification support for both
+- make boosts follow default visibility
+- notification sounds:
+    - disabled by default, includes the misskey notif sound if enabled
+    - custom ones (overriding the default) that can be randomly picked from
+    - custom ones for certain users
+    - volume controls for all sounds individually
+- rename "repeats" to "boosts"
+- raise limits:
+    - polls can now have up to 20 options instead of 4
+    - polls can now last anywhere from 1 second to 1000 yearss
 
 ---
 
