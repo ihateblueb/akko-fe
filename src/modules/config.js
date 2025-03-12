@@ -50,7 +50,7 @@ export const defaultState = {
   preloadImage: true,
   loopVideo: true,
   loopVideoSilentOnly: true,
-  streaming: false,
+  streaming: true,
   emojiReactionsOnTimeline: true,
   alwaysShowNewPostButton: false,
   autohideFloatingPostButton: false,
@@ -77,7 +77,7 @@ export const defaultState = {
   highlight: {},
   interfaceLanguage: browserLocale,
   hideScopeNotice: false,
-  useStreamingApi: false,
+  useStreamingApi: true,
   sidebarRight: undefined, // instance default
   widenTimeline: undefined, // instance default
   subjectLineBehavior: undefined, // instance default
@@ -117,11 +117,11 @@ export const defaultState = {
   virtualScrolling: undefined, // instance default
   sensitiveByDefault: undefined, // instance default
   sensitiveIfSubject: undefined,
-  soundOnNotif: false,
+  soundOnNotif: true,
   soundOnNotifVolume: 0.2,
   soundOnNotifCustom: '',
   boostsFollowDefVis: false,
-  renderMisskeyMarkdown: undefined,
+  renderMisskeyMarkdown: true,
   renderMfmOnHover: undefined, // instance default
   conversationDisplay: undefined, // instance default
   conversationTreeAdvanced: undefined, // instance default

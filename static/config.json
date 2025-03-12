@@ -6,7 +6,6 @@
   "hideFilteredStatuses": false,
   "hideMutedPosts": false,
   "hidePostStats": false,
-  "hideSitename": false,
   "hideUserStats": false,
   "loginMethod": "token",
   "logo": "/static/logo.svg",
@@ -22,5 +21,10 @@
   "sidebarRight": false,
   "subjectLineBehavior": "email",
   "theme": "skyloft",
-  "webPushNotifications": false
+  "webPushNotifications": false,
+
+  "hideSiteName": true,
+  "hideSiteFavicon": true,
+  "conversationDisplay": "tree",
+  "mentionLinkDisplay": "full_for_remote"
 }
