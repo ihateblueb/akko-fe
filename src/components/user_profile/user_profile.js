@@ -144,7 +144,7 @@ const UserProfile = {
       const user = this.$store.getters.findUser(userNameOrId)
       if (user) {
         loadById(user.id)
-        this.note = user.relationship.note
+        this.note = user?.relationship?.note
         this.$store.dispatch('setDisplayBackground', user.background_image)
       } else {
         this.$store.dispatch('fetchUser', userNameOrId)
