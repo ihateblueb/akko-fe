@@ -336,6 +336,7 @@ const PostStatusForm = {
   watch: {
     'newStatus': {
       deep: true,
+      flush: 'sync',
       handler () {
         this.statusChanged()
       }

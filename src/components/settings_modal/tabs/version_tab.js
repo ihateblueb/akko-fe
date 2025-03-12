@@ -7,16 +7,18 @@ const VersionTab = {
   data () {
     const instance = this.$store.state.instance
     return {
+      backendCommitUrl: instance.backendCommitUrl,
       backendVersion: instance.backendVersion,
+      frontendCommitUrl: instance.frontendCommitUrl,
       frontendVersion: instance.frontendVersion
     }
   },
   computed: {
     frontendVersionLink () {
-      return pleromaFeCommitUrl + this.frontendVersion
+      return joinURL(this.frontendCommitUrl, this.frontendVersion)
     },
     backendVersionLink () {
-      return pleromaBeCommitUrl + extractCommit(this.backendVersion)
+      return joinURL(this.backendCommitUrl, extractCommit(this.backendVersion))
     }
   }
 }

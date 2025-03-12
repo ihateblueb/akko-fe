@@ -160,6 +160,16 @@
           </BooleanSetting>
         </li>
         <li>
+          <BooleanSetting path="centerAlignBio">
+            {{ $t('settings.center_align_bio') }}
+          </BooleanSetting>
+        </li>
+        <li>
+          <BooleanSetting path="compactUserInfo">
+            {{ $t('settings.compact_user_info') }}
+          </BooleanSetting>
+        </li>
+        <li>
           <BooleanSetting path="stopGifs">
             {{ $t('settings.stop_gifs') }}
           </BooleanSetting>
@@ -267,6 +277,11 @@
         <li>
           <BooleanSetting path="sidebarRight">
             {{ $t('settings.right_sidebar') }}
+          </BooleanSetting>
+        </li>
+        <li>
+          <BooleanSetting path="widenTimeline">
+            {{ $t('settings.widen_timeline') }}
           </BooleanSetting>
         </li>
         <li>

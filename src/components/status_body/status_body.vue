@@ -1,7 +1,7 @@
 <template>
   <div
     class="StatusBody"
-    :class="{ '-compact': compact, 'mfm-disabled': !renderMisskeyMarkdown }"
+    :class="{ '-compact': compact }"
   >
     <div class="body">
       <div
@@ -91,6 +91,7 @@
               {{ ' ' }}
               <button
                 class="btn button-default"
+                :disabled="translating"
                 @click="translateStatus"
               >
                 {{ $t('status.translate') }}
