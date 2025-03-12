@@ -21,6 +21,10 @@ const SCOPE_LEVELS = {
   'public': 3
 }
 
+import {
+  IconMail, IconLock, IconCurrentLocation, IconHome, IconWorld
+} from '@tabler/icons-vue';
+
 const ScopeSelector = {
   props: [
     'showAll',
@@ -62,6 +66,13 @@ const ScopeSelector = {
         local: { selected: this.currentScope === 'local' }
       }
     }
+  },
+  components: {
+    IconMail,
+    IconLock,
+    IconCurrentLocation,
+    IconHome,
+    IconWorld
   },
   methods: {
     shouldShow (scope) {

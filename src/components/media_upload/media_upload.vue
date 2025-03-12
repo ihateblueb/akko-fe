@@ -4,16 +4,13 @@
     :class="{ disabled: disabled }"
     :title="$t('tool_tip.media_upload')"
   >
-    <FAIcon
+    <IconLoader2
       v-if="uploading"
       class="progress-icon"
-      icon="circle-notch"
-      spin
     />
-    <FAIcon
+    <IconUpload
       v-if="!uploading"
       class="new-icon"
-      icon="upload"
     />
     <input
       v-if="uploadReady"
@@ -36,6 +33,15 @@
 
   .hidden-input-file {
     display: none;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .progress-icon {
+    animation: infinite linear spin .5s;
   }
 }
  </style>

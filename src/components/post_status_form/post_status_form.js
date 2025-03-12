@@ -36,6 +36,11 @@ library.add(
   faCircleNotch
 )
 
+import {
+  IconChevronLeft, IconChevronRight,
+  IconMoodSmile, IconChartBar, IconEyeOff
+} from '@tabler/icons-vue';
+
 var finEvent
 var finNewStatus
 var finOpts
@@ -128,7 +133,12 @@ const PostStatusForm = {
     Attachment,
     StatusContent,
     Gallery,
-    ConfirmModal
+    ConfirmModal,
+    IconChevronLeft,
+    IconChevronRight,
+    IconMoodSmile,
+    IconChartBar,
+    IconEyeOff
   },
   mounted () {
     this.updateIdempotencyKey()

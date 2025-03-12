@@ -2,13 +2,9 @@
 import statusPosterService from '../../services/status_poster/status_poster.service.js'
 import fileSizeFormatService from '../../services/file_size_format/file_size_format.js'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUpload, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
-
-library.add(
-  faUpload,
-  faCircleNotch
-)
+import {
+  IconUpload, IconLoader2
+} from '@tabler/icons-vue';
 
 const mediaUpload = {
   data () {
@@ -21,6 +17,10 @@ const mediaUpload = {
     uploading () {
       return this.uploadCount > 0
     }
+  },
+  components: {
+    IconUpload,
+    IconLoader2
   },
   methods: {
     uploadFile (file) {
@@ -42,7 +42,7 @@ const mediaUpload = {
         .then((fileData) => {
           self.$emit('uploaded', fileData)
           self.decreaseUploadCount()
-        }, (error) => {  
+        }, (error) => {
           self.$emit('upload-failed', 'default')
           self.decreaseUploadCount()
         })

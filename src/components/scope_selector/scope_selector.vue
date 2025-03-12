@@ -11,10 +11,7 @@
       type="button"
       @click="changeVis('direct')"
     >
-      <FAIcon
-        icon="envelope"
-        class="fa-scale-110 fa-old-padding"
-      />
+      <IconMail :size="20" />
     </button>
     <button
       v-if="showPrivate"
@@ -24,10 +21,7 @@
       type="button"
       @click="changeVis('private')"
     >
-      <FAIcon
-        icon="lock"
-        class="fa-scale-110 fa-old-padding"
-      />
+      <IconLock :size="20" />
     </button>
     <button
       v-if="showUnlisted"
@@ -37,10 +31,7 @@
       type="button"
       @click="changeVis('unlisted')"
     >
-      <FAIcon
-        icon="lock-open"
-        class="fa-scale-110 fa-old-padding"
-      />
+      <IconHome :size="20" />
     </button>
     <button
       v-if="showPublic"
@@ -50,10 +41,7 @@
       type="button"
       @click="changeVis('public')"
     >
-      <FAIcon
-        icon="globe"
-        class="fa-scale-110 fa-old-padding"
-      />
+      <IconWorld :size="20" />
     </button>
     <button
       v-if="showLocal"
@@ -63,10 +51,7 @@
       type="button"
       @click="changeVis('local')"
     >
-      <FAIcon
-        icon="users"
-        class="fa-scale-110 fa-old-padding"
-      />
+      <IconCurrentLocation :size="20" />
     </button>
   </div>
 </template>
@@ -77,14 +62,11 @@
 @import '../../_variables.scss';
 
 .ScopeSelector {
-
   .scope {
     display: inline-block;
     cursor: pointer;
-    min-width: 1.3em;
-    min-height: 1.3em;
     text-align: center;
-    margin-right: 0.4em;
+    padding: 4px 8px;
 
     &.selected svg {
       color: $fallback--lightText;

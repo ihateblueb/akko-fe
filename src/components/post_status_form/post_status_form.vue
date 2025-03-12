@@ -82,7 +82,14 @@
             @click.stop.prevent="togglePreview"
           >
             {{ $t('post_status.preview') }}
-            <FAIcon :icon="showPreview ? 'chevron-left' : 'chevron-right'" />
+            <IconChevronLeft
+              v-if="showPreview"
+              :size="18"
+            />
+            <IconChevronRight
+              v-if="!showPreview"
+              :size="18"
+            />
           </a>
           <div
             v-show="previewLoading"
@@ -201,10 +208,11 @@
           />
 
           <div
-            class="format-selector-container">
+            class="format-selector-container"
+          >
             <div
               class="format-selector"
-              >
+            >
               <Select
                 id="post-language"
                 v-model="newStatus.language"
@@ -274,7 +282,7 @@
             :title="$t('emoji.add_emoji')"
             @click="showEmojiPicker"
           >
-            <FAIcon icon="smile-beam" />
+            <IconMoodSmile />
           </button>
           <button
             v-if="pollsAvailable"
@@ -283,7 +291,7 @@
             :title="$t('polls.add_poll')"
             @click="togglePollForm"
           >
-            <FAIcon icon="poll-h" />
+            <IconChartBar />
           </button>
           <button
             v-if="!disableSubject"
@@ -292,7 +300,7 @@
             :title="$t('post_status.toggle_content_warning')"
             @click="toggleSubjectVisible"
           >
-            <FAIcon icon="eye-slash" />
+            <IconEyeOff />
           </button>
         </div>
         <button
@@ -429,6 +437,8 @@
   }
 
   .preview-toggle {
+    display: flex;
+    align-items: center;
     flex: 1;
     cursor: pointer;
     user-select: none;
