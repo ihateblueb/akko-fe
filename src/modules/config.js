@@ -56,6 +56,8 @@ export const defaultState = {
   autohideFloatingPostButton: false,
   pauseOnUnfocused: true,
   displayPageBackgrounds: true,
+  centerAlignBio: false,
+  compactUserInfo: true,
   stopGifs: undefined,
   replyVisibility: 'all',
   thirdColumnMode: 'notifications',
@@ -77,6 +79,7 @@ export const defaultState = {
   hideScopeNotice: false,
   useStreamingApi: false,
   sidebarRight: undefined, // instance default
+  widenTimeline: undefined, // instance default
   subjectLineBehavior: undefined, // instance default
   alwaysShowSubjectInput: undefined, // instance default
   postContentType: undefined, // instance default

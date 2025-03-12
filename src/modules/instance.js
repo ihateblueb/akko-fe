@@ -67,6 +67,7 @@ const defaultState = {
   showNavShortcuts: true,
   showWiderShortcuts: true,
   sidebarRight: false,
+  widenTimeline: false,
   subjectLineBehavior: 'email',
   theme: 'pleroma-dark',
   virtualScrolling: true,
@@ -83,6 +84,8 @@ const defaultState = {
   conversationOtherRepliesButton: 'below',
   conversationTreeFadeAncestors: false,
   maxDepthInThread: 6,
+  backendCommitUrl: 'https://iceshrimp.dev/iceshrimp/akkoma-fe/commit/',
+  frontendCommitUrl: 'https://iceshrimp.dev/iceshrimp/Iceshrimp.NET/commit/',
 
   // Nasty stuff
   customEmoji: [],

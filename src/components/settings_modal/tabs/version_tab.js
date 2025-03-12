@@ -7,7 +7,9 @@ const VersionTab = {
   data () {
     const instance = this.$store.state.instance
     return {
+      backendCommitUrl: instance.backendCommitUrl,
       backendVersion: instance.backendVersion,
+      frontendCommitUrl: instance.frontendCommitUrl,
       frontendVersion: instance.frontendVersion
     }
   },
