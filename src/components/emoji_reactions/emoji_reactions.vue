@@ -21,7 +21,7 @@
             class="reaction-emoji"
             height="2.55em"
           />
-          {{ reaction.count }}
+          <span>{{ reaction.count }}</span>
         </span>
         <span v-else>
           <span class="reaction-emoji unicode-emoji">
