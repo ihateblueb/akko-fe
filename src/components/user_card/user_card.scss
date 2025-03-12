@@ -185,6 +185,7 @@
     // big one
     z-index: 1;
     line-height: 2em;
+    margin-top: -0.6em;
 
     --emoji-size: 1.7em;
 
@@ -201,6 +202,7 @@
       color: $fallback--lightText;
       color: var(--lightText, $fallback--lightText);
       grid-area: hand;
+      font-size: 1.1em;
     }
 
     .dailyAvg {
@@ -255,13 +257,14 @@
     text-align: start;
     text-overflow: ellipsis;
     overflow: hidden;
-    margin-left: 0.6em;
+    margin-left: 0.55em;
     font-size: 1.1em;
     grid-area: name;
     align-self: center;
     white-space: nowrap;
     max-width: 100%;
     z-index: 1; // so shadow from user avatar doesn't overlap it
+    margin-top: -0.5em;
   }
 
   .user-meta {

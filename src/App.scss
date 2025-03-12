@@ -255,6 +255,10 @@ nav {
         }
       }
 
+      &.-scrollable:has(.user-panel) {
+        padding-left: calc(var(--___paddingIncrease) + var(--___columnMargin) / 999);
+      }
+
       .panel-heading.-sticky {
         top: calc(var(--columnGap) / -1);
       }
