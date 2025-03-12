@@ -15,10 +15,10 @@ const VersionTab = {
   },
   computed: {
     frontendVersionLink () {
-      return joinURL(this.frontendCommitUrl, this.frontendVersion)
+      return pleromaFeCommitUrl + this.frontendVersion
     },
     backendVersionLink () {
-      return joinURL(this.backendCommitUrl, extractCommit(this.backendVersion))
+      return pleromaBeCommitUrl + extractCommit(this.backendVersion)
     }
   }
 }

@@ -84,8 +84,8 @@ const defaultState = {
   conversationOtherRepliesButton: 'below',
   conversationTreeFadeAncestors: false,
   maxDepthInThread: 6,
-  backendCommitUrl: 'https://akkoma.dev/AkkomaGang/akkoma/commit/',
-  frontendCommitUrl: 'https://akkoma.dev/AkkomaGang/pleroma-fe/commit/',
+  backendCommitUrl: 'https://iceshrimp.dev/iceshrimp/akkoma-fe/commit/',
+  frontendCommitUrl: 'https://iceshrimp.dev/iceshrimp/Iceshrimp.NET/commit/',
 
   // Nasty stuff
   customEmoji: [],
